@@ -22,11 +22,13 @@ namespace Orbis.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configurações de entidades, relacionamentos e tabelas
-            modelBuilder.Entity<OngParceira>().ToTable("tb_ong_parceiras");
-            modelBuilder.Entity<MatchAjuda>().ToTable("tb_match_ajuda");
-            modelBuilder.Entity<OfertaDoacao>().ToTable("tb_oferta_doacao");
-            modelBuilder.Entity<PedidoAjuda>().ToTable("tb_pedido_ajuda");
+            modelBuilder.Entity<Usuario>().ToTable("TB_USUARIO");
+            modelBuilder.Entity<CheckSeguranca>().ToTable("TB_CHECK_SEGURANCA");
+            modelBuilder.Entity<PedidoAjuda>().ToTable("TB_PEDIDO_AJUDA");
+            modelBuilder.Entity<OfertaDoacao>().ToTable("TB_OFERTA_DOACAO");
+            modelBuilder.Entity<MatchAjuda>().ToTable("TB_MATCH_AJUDA");
+            modelBuilder.Entity<OngParceira>().ToTable("TB_ONG_PARCEIRAS");
+
             base.OnModelCreating(modelBuilder);
         }
     }
