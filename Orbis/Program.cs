@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Orbis.Infrastructure.Data;
 using Microsoft.OpenApi.Models;
+using Orbis.Domain.Repositories;
+using Orbis.Infrastructure.Repositories;
 
 
 namespace Orbis { 
@@ -35,6 +37,9 @@ namespace Orbis {
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
             });
+
+            //Registro de Repositório
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
