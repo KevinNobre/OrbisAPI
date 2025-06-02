@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "Orbis.Controllers.PedidoAjudaController",
+    "Method": "GetAll",
+    "RelativePath": "api/PedidoAjuda",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Orbis.Controllers.PedidoAjudaController",
+    "Method": "Create",
+    "RelativePath": "api/PedidoAjuda",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedido",
+        "Type": "Orbis.Domain.Entities.PedidoAjuda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Orbis.Controllers.PedidoAjudaController",
+    "Method": "GetById",
+    "RelativePath": "api/PedidoAjuda/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Orbis.Controllers.PedidoAjudaController",
+    "Method": "Update",
+    "RelativePath": "api/PedidoAjuda/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pedido",
+        "Type": "Orbis.Domain.Entities.PedidoAjuda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Orbis.Controllers.PedidoAjudaController",
+    "Method": "Delete",
+    "RelativePath": "api/PedidoAjuda/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Orbis.Controllers.UsuarioController",
     "Method": "GetAll",
     "RelativePath": "api/Usuario",
