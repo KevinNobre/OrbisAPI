@@ -40,6 +40,17 @@ namespace Orbis.Infrastructure.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            modelBuilder.Entity<OngParceira>(entity =>
+            {
+                entity.ToTable("TB_ONG_PARCEIRAS");
+
+                entity.HasKey(e => e.OngId);
+
+                entity.Property(e => e.OngId)
+                      .HasColumnName("ONG_ID")
+                      .ValueGeneratedOnAdd();
+            });
+
             base.OnModelCreating(modelBuilder);
         }
     }
