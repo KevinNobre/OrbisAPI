@@ -29,6 +29,17 @@ namespace Orbis.Infrastructure.Data
             modelBuilder.Entity<MatchAjuda>().ToTable("TB_MATCH_AJUDA");
             modelBuilder.Entity<OngParceira>().ToTable("TB_ONG_PARCEIRAS");
 
+            modelBuilder.Entity<PedidoAjuda>(entity =>
+            {
+                entity.ToTable("TB_PEDIDO_AJUDA");
+
+                entity.HasOne(p => p.Usuario)
+                    .WithMany()
+                    .HasForeignKey(p => p.UsuarioId)
+                    .HasConstraintName("FK_PEDIDO_AJUDA_USUARIO")
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
             base.OnModelCreating(modelBuilder);
         }
     }
