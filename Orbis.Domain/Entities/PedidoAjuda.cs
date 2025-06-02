@@ -12,34 +12,34 @@ namespace Orbis.Domain.Entities
     public class PedidoAjuda
     {
         [Key]
-        [Column("pedido_id")]
+        [Column("PEDIDO_ID")]
         public int PedidoId { get; set; }
 
         [Required]
-        [Column("tipo_ajuda")]
+        [Column("TIPO_AJUDA")]
         public string TipoAjuda { get; set; }
 
         [Required]
-        [Column("urgencia")]
+        [Column("URGENCIA")]
         public string Urgencia { get; set; }
 
-        [Column("descricao")]
+        [Column("DESCRICAO")]
         public string Descricao { get; set; }
 
-        [Column("localidade")]
+        [Column("LOCALIDADE")]
         public string Localidade { get; set; }
 
-        [Column("data_pedido")]
+        [Column("DATA_PEDIDO")]
         public DateTime DataPedido { get; set; } = DateTime.Now;
 
-        [Column("status")]
+        [Column("STATUS")]
         public string Status { get; set; } = "pendente";
 
         [Required]
-        [Column("usuario_id")]
+        [Column("USUARIO_ID")]
         public int UsuarioId { get; set; }
 
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
     }
 }
