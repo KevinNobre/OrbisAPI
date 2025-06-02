@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orbis.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4ffb219a55672db8ee6234fa26a43610fa1fef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+093126bbccb3a8a12069abe0c328d7b4f867b89c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orbis.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orbis.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

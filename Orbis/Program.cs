@@ -41,6 +41,7 @@ namespace Orbis {
             //Registro de Repositório
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             builder.Services.AddScoped<IPedidoAjudaRepository, PedidoAjudaRepository>();
+            builder.Services.AddScoped<IOngParceiraRepository, OngParceiraRepository>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
