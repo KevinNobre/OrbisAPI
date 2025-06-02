@@ -1,15 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbis", "Orbis\Orbis.csproj", "{C9CABF6E-B318-44F2-8189-6E6B384C26EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{050E3368-268C-4A52-BE1D-42D11A64224F} = {050E3368-268C-4A52-BE1D-42D11A64224F}
+		{2A035F21-9E90-48E8-B516-69A0D1CEA547} = {2A035F21-9E90-48E8-B516-69A0D1CEA547}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbis.Infrastructure", "Orbis.Infrastructure\Orbis.Infrastructure.csproj", "{050E3368-268C-4A52-BE1D-42D11A64224F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93B3639E-B650-4B97-909F-4F4332548CF4} = {93B3639E-B650-4B97-909F-4F4332548CF4}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbis.Domain", "Orbis.Domain\Orbis.Domain.csproj", "{93B3639E-B650-4B97-909F-4F4332548CF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbis.Application", "Orbis.Application\Orbis.Application.csproj", "{2A035F21-9E90-48E8-B516-69A0D1CEA547}"
+	ProjectSection(ProjectDependencies) = postProject
+		{050E3368-268C-4A52-BE1D-42D11A64224F} = {050E3368-268C-4A52-BE1D-42D11A64224F}
+		{93B3639E-B650-4B97-909F-4F4332548CF4} = {93B3639E-B650-4B97-909F-4F4332548CF4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
