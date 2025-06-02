@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orbis.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3051d6c07046b0473444c9c186c5f9b3e868bd3e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd088568bd14be91261236664753ece38194135")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orbis.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orbis.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
