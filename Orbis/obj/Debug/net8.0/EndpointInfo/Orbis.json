@@ -1,0 +1,14 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "OrbisI API",
+    "description": "O Orbis é um sistema de solicitação de ajudas em tempo real.",
+    "contact": {
+      "name": "ByteBloom Tech",
+      "url": "https://github.com/KevinNobre/OrbisAPI.git"
+    },
+    "version": "v1"
+  },
+  "paths": { },
+  "components": { }
+}

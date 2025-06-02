@@ -15,6 +15,27 @@ namespace Orbis {
             builder.Services.AddDbContext<OrbisDbContext>(options =>
                 options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
+            // Configuração do Swagger
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Orbis API",
+                    Version = "v1",
+                    Description = "O Orbis é um sistema de solicitação de ajudas em tempo real.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "ByteBloom Tech",
+                        Url = new Uri("https://github.com/KevinNobre/OrbisAPI.git")
+                    }
+                });
+
+                var xmlFile = "Orbis.API.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.IncludeXmlComments(xmlPath);
+            });
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -30,6 +51,14 @@ namespace Orbis {
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            // Middleware do Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Orbis API v1");
+                options.RoutePrefix = "swagger";
+            });
 
             app.UseRouting();
 
