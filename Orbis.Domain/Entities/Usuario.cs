@@ -12,22 +12,26 @@ namespace Orbis.Domain.Entities
     public class Usuario
     {
         [Key]
-        [Column("usuario_id")]
+        [Column("USUARIO_ID")]
         public int UsuarioId { get; set; }
 
         [Required]
-        [Column("nome")]
+        [Column("NOME")]
+        [MaxLength(55)]
         public string Nome { get; set; }
 
         [Required]
-        [Column("sobrenome")]
+        [Column("SOBRENOME")]
+        [MaxLength(55)]
         public string Sobrenome { get; set; }
 
         [Required]
-        [Column("senha")]
+        [Column("SENHA")]
+        [MaxLength(20)]
         public string Senha { get; set; }
 
-        [Column("cep")]
+        [Column("CEP")]
+        [MaxLength(12)]
         public string Cep { get; set; }
     }
 }
