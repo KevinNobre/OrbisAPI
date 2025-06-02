@@ -12,20 +12,20 @@ namespace Orbis.Domain.Entities
     public class OngParceira
     {
         [Key]
-        [Column("ong_id")]
+        [Column("ONG_ID")]
         public int OngId { get; set; }
 
         [Required]
-        [Column("nome")]
+        [Column("NOME")]
         public string Nome { get; set; }
 
-        [Column("localidade")]
+        [Column("LOCALIDADE")]
         public string Localidade { get; set; }
 
-        [Column("tipo_ong")]
+        [Column("TIPO_ONG")]
         public string TipoOng { get; set; }
 
-        [Column("telefone")]
+        [Column("TELEFONE")]
         public string Telefone { get; set; }
     }
 }
