@@ -9,6 +9,31 @@ KEVIN CHRISTIAN NOBRE – RM: 552590
 SABRINA COUTO XAVIER – RM: 552728
 
 ---
+## 🏗️ Arquitetura do Sistema  
+
+### 🔹 **Escolha da Arquitetura: Monolítica vs Microservices**  
+O **Orbis** foi desenvolvido utilizando uma **arquitetura monolítica**, onde toda a lógica reside em um único código-base.  
+
+🟢 **Motivos da escolha:**  
+- **Simplicidade no desenvolvimento e manutenção** ✅  
+- **Menor complexidade operacional** 🚀  
+- **Facilidade de integração com o banco de dados Oracle** 💾  
+- **Escalabilidade futura planejada**, permitindo migração para microsserviços se necessário 🔄  
+
+🔹 **Estrutura da API**  
+A API segue **boas práticas de desenvolvimento**, utilizando:  
+- **Princípios SOLID** para modularidade e manutenção eficiente.  
+- **Design Patterns** como **Repository Pattern** e **Service Layer** para separação de responsabilidades.  
+
+### Escopo
+O projeto abrange o desenvolvimento de um sistema que:
+- Realiza o gerenciamento de usuário, incluindo registro e autenticação.
+- Fornece funcionalidades de CRUD (Create, Read, Update, Delete) para gerenciar os dados dos usuários pacientes.
+- Implementa a lógica de negócios necessária para validações e operações específicas, como a validações de segurança.
+- Estabelece uma estrutura de repositório para o acesso e manipulação de dados no banco de dados.
+- Utiliza mapeamento de entidades para garantir que as operações do banco de dados sejam realizadas de maneira eficaz.
+  
+---
 
 ## 📚 Design Patterns Utilizados  
 
