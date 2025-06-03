@@ -15,9 +15,10 @@
         "tags": [
           "OngParceira"
         ],
+        "summary": "Obter todas as ONGs Parceiras",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Sucesso",
             "content": {
               "text/plain": {
                 "schema": {
@@ -51,7 +52,10 @@
         "tags": [
           "OngParceira"
         ],
+        "summary": "Cadastrar uma ONG Parceira",
+        "description": "objeto Json",
         "requestBody": {
+          "description": "Dados da ONG",
           "content": {
             "application/json": {
               "schema": {
@@ -73,6 +77,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Sucesso"
+          },
+          "404": {
+            "description": "Não encontrado"
           }
         }
       }
@@ -82,10 +92,12 @@
         "tags": [
           "OngParceira"
         ],
+        "summary": "Obtém uma ONG pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador da ONG",
             "required": true,
             "schema": {
               "type": "integer",
@@ -95,7 +107,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Sucesso",
             "content": {
               "text/plain": {
                 "schema": {
@@ -113,6 +125,12 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "500": {
+            "description": "Erro interno"
           }
         }
       },
@@ -120,10 +138,12 @@
         "tags": [
           "OngParceira"
         ],
+        "summary": "Atualizar uma ONG Parceira",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador da ONG",
             "required": true,
             "schema": {
               "type": "integer",
@@ -132,6 +152,7 @@
           }
         ],
         "requestBody": {
+          "description": "Dados da ONG",
           "content": {
             "application/json": {
               "schema": {
@@ -153,6 +174,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       },
@@ -160,10 +187,12 @@
         "tags": [
           "OngParceira"
         ],
+        "summary": "Deletar uma ONG Parceira",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador da ONG",
             "required": true,
             "schema": {
               "type": "integer",
@@ -174,6 +203,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       }
@@ -183,9 +218,10 @@
         "tags": [
           "PedidoAjuda"
         ],
+        "summary": "Obter todos os pedidos",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucesso"
           }
         }
       },
@@ -193,7 +229,10 @@
         "tags": [
           "PedidoAjuda"
         ],
+        "summary": "Cadastrar um Pedido de Ajuda",
+        "description": "objeto Json",
         "requestBody": {
+          "description": "Dados do Pedido",
           "content": {
             "application/json": {
               "schema": {
@@ -215,6 +254,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Sucesso"
+          },
+          "404": {
+            "description": "Não encontrado"
           }
         }
       }
@@ -224,10 +269,12 @@
         "tags": [
           "PedidoAjuda"
         ],
+        "summary": "Obtém um pedido pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador do Pedido",
             "required": true,
             "schema": {
               "type": "integer",
@@ -237,7 +284,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucesso"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "500": {
+            "description": "Erro interno"
           }
         }
       },
@@ -245,10 +298,12 @@
         "tags": [
           "PedidoAjuda"
         ],
+        "summary": "Atualizar um Pedido",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador do Pedido",
             "required": true,
             "schema": {
               "type": "integer",
@@ -257,6 +312,7 @@
           }
         ],
         "requestBody": {
+          "description": "Dados do Pedido",
           "content": {
             "application/json": {
               "schema": {
@@ -278,6 +334,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       },
@@ -285,10 +347,12 @@
         "tags": [
           "PedidoAjuda"
         ],
+        "summary": "Deletar um Pedido",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador de Pedido",
             "required": true,
             "schema": {
               "type": "integer",
@@ -299,6 +363,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       }

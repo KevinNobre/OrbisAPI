@@ -126,7 +126,7 @@
   },
   {
     "ContainingType": "Orbis.Controllers.PedidoAjudaController",
-    "Method": "GetById",
+    "Method": "Get",
     "RelativePath": "api/PedidoAjuda/{id}",
     "HttpMethod": "GET",
     "IsController": true,

@@ -4,6 +4,54 @@
         <name>Orbis</name>
     </assembly>
     <members>
+        <member name="M:Orbis.Controllers.PedidoAjudaController.GetAll">
+            <summary>
+            Obter todos os pedidos
+            </summary>
+            <returns>Todos os Pedidos de Ajuda </returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:Orbis.Controllers.PedidoAjudaController.Get(System.Int32)">
+            <summary>
+            Obtém um pedido pelo ID.
+            </summary>
+            <param name="id">Identificador do Pedido</param>
+            <returns>Dados do Pedido</returns>
+            <response code="200">Sucesso</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro interno</response>
+        </member>
+        <member name="M:Orbis.Controllers.PedidoAjudaController.Create(Orbis.Domain.Entities.PedidoAjuda)">
+            <summary>
+            Cadastrar um Pedido de Ajuda
+            </summary>
+            <remarks>
+            objeto Json
+            </remarks>
+            <param name="pedido">Dados do Pedido</param>
+            <returns>Pedido recém criado</returns>
+            <response code="201">Sucesso</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:Orbis.Controllers.PedidoAjudaController.Update(System.Int32,Orbis.Domain.Entities.PedidoAjuda)">
+            <summary>
+            Atualizar um Pedido
+            </summary>
+            <param name="id">Identificador do Pedido</param>
+            <param name="pedido">Dados do Pedido</param>
+            <returns>Não retorna informações</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:Orbis.Controllers.PedidoAjudaController.Delete(System.Int32)">
+            <summary>
+            Deletar um Pedido
+            </summary>
+            <param name="id">Identificador de Pedido</param>
+            <returns>Não retorna informações</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
         <member name="M:Orbis.Controllers.UsuarioController.GetAll">
             <summary>
             Obter todos os Usuarios
@@ -48,6 +96,54 @@
             Deletar um Usuario
             </summary>
             <param name="id">Identificador de Usuario</param>
+            <returns>Não retorna informações</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:Orbis.API.Controllers.OngParceiraController.Get">
+            <summary>
+            Obter todas as ONGs Parceiras
+            </summary>
+            <returns>Todas as ONGs </returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:Orbis.API.Controllers.OngParceiraController.GetById(System.Int32)">
+            <summary>
+            Obtém uma ONG pelo ID.
+            </summary>
+            <param name="id">Identificador da ONG</param>
+            <returns>Dados da ONG</returns>
+            <response code="200">Sucesso</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro interno</response>
+        </member>
+        <member name="M:Orbis.API.Controllers.OngParceiraController.Create(Orbis.Domain.Entities.OngParceira)">
+            <summary>
+            Cadastrar uma ONG Parceira 
+            </summary>
+            <remarks>
+            objeto Json
+            </remarks>
+            <param name="ong">Dados da ONG</param>
+            <returns>ONG recém cadastrada</returns>
+            <response code="201">Sucesso</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:Orbis.API.Controllers.OngParceiraController.Update(System.Int32,Orbis.Domain.Entities.OngParceira)">
+            <summary>
+            Atualizar uma ONG Parceira
+            </summary>
+            <param name="id">Identificador da ONG</param>
+            <param name="ong">Dados da ONG</param>
+            <returns>Não retorna informações</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:Orbis.API.Controllers.OngParceiraController.Delete(System.Int32)">
+            <summary>
+            Deletar uma ONG Parceira
+            </summary>
+            <param name="id">Identificador da ONG</param>
             <returns>Não retorna informações</returns>
             <response code="404">Não encontrado</response>
             <response code="204">Sucesso</response>

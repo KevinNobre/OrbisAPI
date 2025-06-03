@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Orbis.Application.DTO;
 using Orbis.Domain.Entities;
 using Orbis.Domain.Repositories;
 
@@ -24,7 +25,8 @@ namespace Orbis.Controllers
         public async Task<IActionResult> GetAll()
         {
             var pedidos = await _repository.GetAllAsync();
-            return Ok(pedidos);
+            var result = pedidos.Select(p => CreateHateoas(p));
+            return Ok(result);
         }
 
         /// <summary>
@@ -36,11 +38,14 @@ namespace Orbis.Controllers
         /// <response code="404">Não encontrado</response>
         /// <response code="500">Erro interno</response>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> Get(int id)
         {
             var pedido = await _repository.GetByIdAsync(id);
-            if (pedido == null) return NotFound();
-            return Ok(pedido);
+            if (pedido == null)
+                return NotFound();
+
+            var hateoasDto = CreateHateoas(pedido);
+            return Ok(hateoasDto);
         }
 
         // Create
@@ -58,7 +63,7 @@ namespace Orbis.Controllers
         public async Task<IActionResult> Create([FromBody] PedidoAjuda pedido)
         {
             await _repository.AddAsync(pedido);
-            return CreatedAtAction(nameof(GetById), new { id = pedido.PedidoId }, pedido);
+            return CreatedAtAction(nameof(Get), new { id = pedido.PedidoId }, CreateHateoas(pedido));
         }
 
         // Update
@@ -91,6 +96,25 @@ namespace Orbis.Controllers
         {
             await _repository.DeleteAsync(id);
             return NoContent();
+        }
+
+        private PedidoAjudaDto CreateHateoas(PedidoAjuda pedido)
+        {
+            return new PedidoAjudaDto
+            {
+                PedidoId = pedido.PedidoId,
+                TipoAjuda = pedido.TipoAjuda,
+                Urgencia = pedido.Urgencia,
+                Descricao = pedido.Descricao,
+                Localidade = pedido.Localidade,
+                Status = pedido.Status,
+                _links = new Dictionary<string, LinkDto>
+                {
+                    { "self", new LinkDto($"/api/PedidoAjuda/{pedido.PedidoId}", "GET") },
+                    { "update", new LinkDto($"/api/PedidoAjuda/{pedido.PedidoId}", "PUT") },
+                    { "delete", new LinkDto($"/api/PedidoAjuda/{pedido.PedidoId}", "DELETE") }
+                }
+            };
         }
     }
 }
