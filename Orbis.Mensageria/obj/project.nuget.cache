@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "+6ABS/HmPDA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\source\\repos\\Orbis\\Orbis.Mensageria\\Orbis.Mensageria.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

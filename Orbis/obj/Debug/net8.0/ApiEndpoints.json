@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Orbis.Controllers.MensageriaController",
+    "Method": "EnviarMensagem",
+    "RelativePath": "api/Mensageria/enviar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mensagem",
+        "Type": "Orbis.Controllers.PedidoAjudaMensagem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Orbis.API.Controllers.OngParceiraController",
     "Method": "Get",
     "RelativePath": "api/OngParceira",

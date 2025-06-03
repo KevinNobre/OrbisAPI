@@ -3,6 +3,7 @@ using Orbis.Infrastructure.Data;
 using Microsoft.OpenApi.Models;
 using Orbis.Domain.Repositories;
 using Orbis.Infrastructure.Repositories;
+using Orbis.Services;
 
 
 namespace Orbis { 
@@ -45,6 +46,7 @@ namespace Orbis {
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<RabbitMQService>();
 
             var app = builder.Build();
 
@@ -66,6 +68,7 @@ namespace Orbis {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Orbis API v1");
                 options.RoutePrefix = "swagger";
             });
+
 
             app.UseRouting();
 

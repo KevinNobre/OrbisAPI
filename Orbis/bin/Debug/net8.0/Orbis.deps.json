@@ -15,6 +15,7 @@
           "Oracle.EntityFrameworkCore": "9.23.80",
           "Orbis.Application": "1.0.0",
           "Orbis.Infrastructure": "1.0.0",
+          "RabbitMQ.Client": "7.1.2",
           "Swashbuckle.AspNetCore": "8.1.2"
         },
         "runtime": {
@@ -600,6 +601,18 @@
           }
         }
       },
+      "RabbitMQ.Client/7.1.2": {
+        "dependencies": {
+          "System.IO.Pipelines": "9.0.5",
+          "System.Threading.RateLimiting": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.1.2.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/8.1.2": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -875,6 +888,7 @@
         }
       },
       "System.Threading.Channels/8.0.0": {},
+      "System.Threading.RateLimiting/8.0.0": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "Orbis.Application/1.0.0": {
         "dependencies": {
@@ -1207,6 +1221,13 @@
       "path": "oracle.manageddataaccess.core/23.8.0",
       "hashPath": "oracle.manageddataaccess.core.23.8.0.nupkg.sha512"
     },
+    "RabbitMQ.Client/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
+      "path": "rabbitmq.client/7.1.2",
+      "hashPath": "rabbitmq.client.7.1.2.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/8.1.2": {
       "type": "package",
       "serviceable": true,
@@ -1430,6 +1451,13 @@
       "sha512": "sha512-CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
       "path": "system.threading.channels/8.0.0",
       "hashPath": "system.threading.channels.8.0.0.nupkg.sha512"
+    },
+    "System.Threading.RateLimiting/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
+      "path": "system.threading.ratelimiting/8.0.0",
+      "hashPath": "system.threading.ratelimiting.8.0.0.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",

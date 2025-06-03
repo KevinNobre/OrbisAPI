@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Orbis.Mensageria": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

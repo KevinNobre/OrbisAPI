@@ -142,3 +142,4 @@ C:\Users\kevin\source\repos\Orbis\Orbis\bin\Debug\net8.0\Orbis.Application.pdb
 C:\Users\kevin\source\repos\Orbis\Orbis\bin\Debug\net8.0\Orbis.Infrastructure.pdb
 C:\Users\kevin\source\repos\Orbis\Orbis\bin\Debug\net8.0\Orbis.Domain.pdb
 C:\Users\kevin\source\repos\Orbis\Orbis\bin\Debug\net8.0\Orbis.API.xml
+C:\Users\kevin\source\repos\Orbis\Orbis\bin\Debug\net8.0\RabbitMQ.Client.dll

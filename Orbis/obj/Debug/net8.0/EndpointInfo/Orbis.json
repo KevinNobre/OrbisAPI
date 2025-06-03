@@ -10,6 +10,37 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Mensageria/enviar": {
+      "post": {
+        "tags": [
+          "Mensageria"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaMensagem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaMensagem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaMensagem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/OngParceira": {
       "get": {
         "tags": [
@@ -722,6 +753,20 @@
         "additionalProperties": false
       },
       "PedidoAjudaEntrada": {
+        "type": "object",
+        "properties": {
+          "tipoAjuda": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PedidoAjudaMensagem": {
         "type": "object",
         "properties": {
           "tipoAjuda": {
