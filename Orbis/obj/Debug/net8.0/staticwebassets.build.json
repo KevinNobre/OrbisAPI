@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "63uZH+/6WHKpelZz0OneJvuW570phDJRxUZa5m8MPIw=",
+  "Hash": "BWEaoZxGr8hmN0nfBoWA7SMgeDEhWLg0nOnvrNHUUlM=",
   "Source": "Orbis",
   "BasePath": "_content/Orbis",
   "Mode": "Default",
@@ -1317,6 +1317,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\kevin\\source\\repos\\Orbis\\Orbis\\wwwroot\\MLModels\\PedidoAjudaModel.zip",
+      "SourceId": "Orbis",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kevin\\source\\repos\\Orbis\\Orbis\\wwwroot\\",
+      "BasePath": "_content/Orbis",
+      "RelativePath": "MLModels/PedidoAjudaModel#[.{fingerprint}]?.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r1t3ipjw5w",
+      "Integrity": "zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MLModels\\PedidoAjudaModel.zip"
     }
   ],
   "Endpoints": [
@@ -6237,6 +6258,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "MLModels/PedidoAjudaModel.r1t3ipjw5w.zip",
+      "AssetFile": "C:\\Users\\kevin\\source\\repos\\Orbis\\Orbis\\wwwroot\\MLModels\\PedidoAjudaModel.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 17:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r1t3ipjw5w"
+        },
+        {
+          "Name": "label",
+          "Value": "MLModels/PedidoAjudaModel.zip"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis="
+        }
+      ]
+    },
+    {
+      "Route": "MLModels/PedidoAjudaModel.zip",
+      "AssetFile": "C:\\Users\\kevin\\source\\repos\\Orbis\\Orbis\\wwwroot\\MLModels\\PedidoAjudaModel.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 17:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis="
         }
       ]
     },

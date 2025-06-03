@@ -1,0 +1,11 @@
+TipoAjuda,Descricao,Urgencia
+Alimentos,Família sem renda com crianças pequenas,Alta
+Medicamentos,Pessoa com febre e dor constante,Alta
+Transporte,Precisa de transporte para consulta médica,Média
+Alimentos,Família com estoque baixo mas ainda possui alimentos,Baixa
+Moradia,Desabrigado após enchente,Alta
+Alimentos,Falta apenas arroz e feijão para a semana,Média
+Medicamentos,Apenas medicamentos preventivos estão faltando,Baixa
+Transporte,"Precisa visitar parente doente, mas sem emergência",Baixa
+Moradia,Casa condenada após desabamento parcial,Alta
+Medicamentos,Falta remédio contínuo para criança com asma,Alta

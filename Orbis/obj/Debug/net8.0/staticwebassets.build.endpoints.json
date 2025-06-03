@@ -3,6 +3,88 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "MLModels/PedidoAjudaModel.r1t3ipjw5w.zip",
+      "AssetFile": "MLModels/PedidoAjudaModel.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 17:10:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r1t3ipjw5w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis="
+        },
+        {
+          "Name": "label",
+          "Value": "MLModels/PedidoAjudaModel.zip"
+        }
+      ]
+    },
+    {
+      "Route": "MLModels/PedidoAjudaModel.zip",
+      "AssetFile": "MLModels/PedidoAjudaModel.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 17:10:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zztVPNf9QpNjU8d0jh+EVshwIY3zoFIs8Rat9SBAVis="
+        }
+      ]
+    },
+    {
       "Route": "Orbis.styles.css",
       "AssetFile": "Orbis.styles.css",
       "Selectors": [],

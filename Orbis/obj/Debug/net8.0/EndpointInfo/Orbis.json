@@ -373,6 +373,56 @@
         }
       }
     },
+    "/api/PedidoAjudaML/prever": {
+      "post": {
+        "tags": [
+          "PedidoAjudaML"
+        ],
+        "summary": "Realiza a predição da urgência com base no tipo e descrição do pedido de ajuda.",
+        "requestBody": {
+          "description": "Dados de entrada sem urgência",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaEntrada"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaEntrada"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoAjudaEntrada"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PedidoAjudaPredicao"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PedidoAjudaPredicao"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PedidoAjudaPredicao"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Usuario": {
       "get": {
         "tags": [
@@ -667,6 +717,30 @@
           },
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PedidoAjudaEntrada": {
+        "type": "object",
+        "properties": {
+          "tipoAjuda": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PedidoAjudaPredicao": {
+        "type": "object",
+        "properties": {
+          "urgencia": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

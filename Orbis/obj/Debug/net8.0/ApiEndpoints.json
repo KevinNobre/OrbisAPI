@@ -178,6 +178,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PedidoAjudaMLController",
+    "Method": "PreverUrgencia",
+    "RelativePath": "api/PedidoAjudaML/prever",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entrada",
+        "Type": "Orbis.MLModels.PedidoAjudaEntrada",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orbis.MLModels.PedidoAjudaPredicao",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Orbis.Controllers.UsuarioController",
     "Method": "GetAll",
     "RelativePath": "api/Usuario",

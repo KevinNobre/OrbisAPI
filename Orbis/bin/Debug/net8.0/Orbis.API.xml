@@ -148,5 +148,12 @@
             <response code="404">Não encontrado</response>
             <response code="204">Sucesso</response>
         </member>
+        <member name="M:PedidoAjudaMLController.PreverUrgencia(Orbis.MLModels.PedidoAjudaEntrada)">
+            <summary>
+            Realiza a predição da urgência com base no tipo e descrição do pedido de ajuda.
+            </summary>
+            <param name="entrada">Dados de entrada sem urgência</param>
+            <returns>Urgência prevista</returns>
+        </member>
     </members>
 </doc>
