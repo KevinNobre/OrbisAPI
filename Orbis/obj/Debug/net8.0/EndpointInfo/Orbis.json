@@ -308,9 +308,10 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Obter todos os Usuarios",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Sucesso",
             "content": {
               "text/plain": {
                 "schema": {
@@ -344,7 +345,10 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Cadastrar um Usuario",
+        "description": "objeto Json",
         "requestBody": {
+          "description": "Dados do Usuario",
           "content": {
             "application/json": {
               "schema": {
@@ -383,6 +387,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Sucesso"
+          },
+          "404": {
+            "description": "Não encontrado"
           }
         }
       }
@@ -392,10 +402,12 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Obtém um usuário pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador do Usuário",
             "required": true,
             "schema": {
               "type": "integer",
@@ -405,7 +417,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Sucesso",
             "content": {
               "text/plain": {
                 "schema": {
@@ -423,6 +435,12 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "500": {
+            "description": "Erro interno"
           }
         }
       },
@@ -430,10 +448,12 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Atualizar um Usuário",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador do Usuario",
             "required": true,
             "schema": {
               "type": "integer",
@@ -442,6 +462,7 @@
           }
         ],
         "requestBody": {
+          "description": "Dados do Usuário",
           "content": {
             "application/json": {
               "schema": {
@@ -463,6 +484,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       },
@@ -470,10 +497,12 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Deletar um Usuario",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador de Usuario",
             "required": true,
             "schema": {
               "type": "integer",
@@ -484,6 +513,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Não encontrado"
+          },
+          "204": {
+            "description": "Sucesso"
           }
         }
       }
