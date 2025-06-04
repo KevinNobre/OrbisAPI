@@ -70,9 +70,49 @@ Exemplo: Controllers dependem de serviços via interfaces (`IUsuarioService`), i
 
 --- 
 
+## 📡 Endpoints da Orbis.API
+
+A `Orbis.API` expõe uma série de endpoints RESTful que permitem o gerenciamento de usuários, pedidos de ajuda, ONGs parceiras e a integração com a mensageria RabbitMQ para classificação de urgência. Abaixo está a descrição dos principais grupos de endpoints:
+
+### 🔐 Usuários
+
+Gerencia os dados dos usuários do sistema.
+
+GET    /api/usuario           → Lista todos os usuários  
+GET    /api/usuario/{id}      → Retorna um usuário por ID  
+POST   /api/usuario           → Cria um novo usuário  
+PUT    /api/usuario/{id}      → Atualiza um usuário existente  
+DELETE /api/usuario/{id}      → Remove um usuário
+
+### 🆘 Pedidos de Ajuda
+
+Registra e acompanha pedidos de ajuda feitos pelos usuários.
+
+GET    /api/pedido-ajuda           → Lista todos os pedidos  
+GET    /api/pedido-ajuda/{id}      → Retorna um pedido por ID  
+POST   /api/pedido-ajuda           → Cria um novo pedido  
+PUT    /api/pedido-ajuda/{id}      → Atualiza um pedido existente  
+DELETE /api/pedido-ajuda/{id}      → Remove um pedido
+
+### 🤝 ONGs Parceiras
+
+Gerencia as ONGs cadastradas na plataforma.
+
+GET    /api/ong-parceira           → Lista todas as ONGs  
+GET    /api/ong-parceira/{id}      → Retorna uma ONG por ID  
+POST   /api/ong-parceira           → Cadastra uma nova ONG  
+PUT    /api/ong-parceira/{id}      → Atualiza os dados de uma ONG  
+DELETE /api/ong-parceira/{id}      → Remove uma ONG
+
+![VIDEO GIF SWAGGER DOC](https://github.com/user-attachments/assets/01b977af-ccd5-4946-a064-38a3cf17315f)
+
+---
+
 ## 📨 Mensageria com RabbitMQ
 
 O projeto **Orbis** implementa um sistema de mensageria assíncrona baseado em **RabbitMQ**, permitindo a comunicação entre serviços de forma desacoplada e resiliente. Essa abordagem garante que mensagens (como pedidos de ajuda) possam ser enviadas, processadas e respondidas mesmo que uma das partes esteja temporariamente indisponível.
+
+![PRINT MENSAGERIA](https://github.com/user-attachments/assets/af3589b5-7e19-41d2-85d0-9b6d6d217356)
 
 ### 🔧 Como funciona:
 
