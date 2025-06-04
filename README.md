@@ -68,7 +68,27 @@ Exemplo: repositórios definem apenas métodos necessários à sua entidade.
 Camadas superiores dependem de **abstrações**, não de implementações concretas.  
 Exemplo: Controllers dependem de serviços via interfaces (`IUsuarioService`), injetadas pelo DI do .NET.
 
+--- 
+
+## 📨 Mensageria com RabbitMQ
+
+O projeto **Orbis** implementa um sistema de mensageria assíncrona baseado em **RabbitMQ**, permitindo a comunicação entre serviços de forma desacoplada e resiliente. Essa abordagem garante que mensagens (como pedidos de ajuda) possam ser enviadas, processadas e respondidas mesmo que uma das partes esteja temporariamente indisponível.
+
+### 🔧 Como funciona:
+
+- **Producer (Produtor):** Envia mensagens para uma fila chamada `pedido_ajuda_urgencia`, contendo informações como tipo de ajuda e descrição.
+- **Consumer (Consumidor):** Escuta a fila e processa as mensagens recebidas, podendo aplicar lógicas específicas (ex: classificação de urgência via ML.NET).
+- **MensageriaController:** Expõe um endpoint HTTP para publicar mensagens na fila, facilitando a integração com o front-end ou outros serviços.
+
+### ✅ Benefícios:
+
+- Comunicação desacoplada entre módulos.
+- Tolerância a falhas e escalabilidade.
+- Persistência de mensagens mesmo se um consumidor estiver offline.
+- Integração futura com microsserviços ou análise de dados em tempo real.
+
 ---
+
 ## Integração de ML.NET ao Orbis
 
 Este projeto Orbis utiliza a biblioteca **ML.NET** para implementar um modelo de aprendizado de máquina com o objetivo de classificar a urgência dos pedidos de ajuda recebidos. A seguir, detalhamos o que foi feito e como a solução funciona.
@@ -118,6 +138,7 @@ Automatizar a classificação da urgência dos pedidos de ajuda baseando-se nas 
 Esse componente de machine learning é fundamental para tornar o Orbis mais eficiente e responsivo às necessidades reais das pessoas que solicitam ajuda, permitindo decisões rápidas e mais assertivas.
 
 ---
+
 ## Como Rodar o Projeto:
 
 Certifique-se de que o SQL Developer esteja instalado e configurado.
@@ -130,6 +151,7 @@ Atualize a string de conexão no arquivo appsettings.json para o seu banco de da
 - C#
 - ASP.NET Core
 - Swagger/OpenAPI para documentação da API
+- RabbitMQ 3.x
 
 ### Pré-requisitos
 Antes de iniciar, certifique-se de ter os seguintes requisitos instalados:
