@@ -6,7 +6,7 @@ KEVIN CHRISTIAN NOBRE – RM: 552590 - Desenvolvedor Full Stack - Mobile & .NET
 
 JULIANA MOREIRA DA SILVA – RM: 554113 - Arquiteta de Soluções em Dados & Cloud
 
-SABRINA COUTO XAVIER – RM: 552728 - Desenvolvedora Back-End
+SABRINA COUTO XAVIER – RM: 552728 - Desenvolvedora Back-End Java & QA
 
 ---
 ## 🏗️ Arquitetura do Sistema  
