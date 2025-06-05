@@ -2,11 +2,11 @@
 
 Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvimento de Sistemas da FIAP, para a Global Solution 01/2025.
 
-JULIANA MOREIRA DA SILVA – RM: 554113
+JULIANA MOREIRA DA SILVA – RM: 554113 - Arquiteta de Soluções em Dados & Cloud
 
-KEVIN CHRISTIAN NOBRE – RM: 552590
+KEVIN CHRISTIAN NOBRE – RM: 552590 - Desenvolvedor Full Stack - Mobile & .NET
 
-SABRINA COUTO XAVIER – RM: 552728
+SABRINA COUTO XAVIER – RM: 552728 - Desenvolvedora Back-End
 
 ---
 ## 🏗️ Arquitetura do Sistema  
