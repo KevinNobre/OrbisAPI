@@ -794,7 +794,8 @@
         "required": [
           "nome",
           "senha",
-          "sobrenome"
+          "sobrenome",
+          "telefone"
         ],
         "type": "object",
         "properties": {
@@ -813,6 +814,11 @@
             "type": "string"
           },
           "senha": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          },
+          "telefone": {
             "maxLength": 20,
             "minLength": 1,
             "type": "string"

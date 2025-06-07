@@ -87,6 +87,7 @@ namespace Orbis.Controllers
             existing.Nome = usuario.Nome;
             existing.Sobrenome = usuario.Sobrenome;
             existing.Senha = usuario.Senha;
+            existing.Telefone = usuario.Telefone;
             existing.Cep = usuario.Cep;
 
             await _repository.UpdateAsync(existing); 

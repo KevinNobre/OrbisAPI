@@ -30,6 +30,11 @@ namespace Orbis.Domain.Entities
         [MaxLength(20)]
         public string Senha { get; set; }
 
+        [Required]
+        [Column("TELEFONE")]
+        [MaxLength(20)]
+        public string Telefone { get; set; }
+
         [Column("CEP")]
         [MaxLength(12)]
         public string Cep { get; set; }
