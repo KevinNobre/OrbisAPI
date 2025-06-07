@@ -1,12 +1,18 @@
 # Orbis API
 
+Orbis é um aplicativo móvel desenvolvido para ajudar pessoas em situações de emergência, promovendo uma conexão rápida e eficiente entre quem precisa de apoio e quem pode ajudar. Seu objetivo é criar uma rede de solidariedade inteligente, especialmente em momentos críticos como enchentes, deslizamentos, quedas de energia e outros desastres.
+
+Em resumo, Orbis é muito mais que um app: é um ambiente seguro, acessível e solidário. Ele permite que qualquer pessoa peça ou ofereça ajuda com agilidade, contribuindo para uma rede de apoio ativa e eficiente — especialmente nos momentos em que isso mais importa.
+
+---
+
 Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvimento de Sistemas da FIAP, para a Global Solution 01/2025.
 
-JULIANA MOREIRA DA SILVA – RM: 554113
+KEVIN CHRISTIAN NOBRE – RM: 552590 - Desenvolvedor Full Stack - Mobile & .NET
 
-KEVIN CHRISTIAN NOBRE – RM: 552590
+JULIANA MOREIRA DA SILVA – RM: 554113 - Arquiteta de Soluções em Dados & Cloud
 
-SABRINA COUTO XAVIER – RM: 552728
+SABRINA DO COUTO XAVIER – RM: 552728 - Desenvolvedora Back-End Java & QA
 
 ---
 ## 🏗️ Arquitetura do Sistema  
@@ -68,7 +74,67 @@ Exemplo: repositórios definem apenas métodos necessários à sua entidade.
 Camadas superiores dependem de **abstrações**, não de implementações concretas.  
 Exemplo: Controllers dependem de serviços via interfaces (`IUsuarioService`), injetadas pelo DI do .NET.
 
+--- 
+
+## 📡 Endpoints da Orbis.API
+
+A `Orbis.API` expõe uma série de endpoints RESTful que permitem o gerenciamento de usuários, pedidos de ajuda, ONGs parceiras e a integração com a mensageria RabbitMQ para classificação de urgência. Abaixo está a descrição dos principais grupos de endpoints:
+
+### 🔐 Usuários
+
+Gerencia os dados dos usuários do sistema.
+
+GET    /api/usuario           → Lista todos os usuários  
+GET    /api/usuario/{id}      → Retorna um usuário por ID  
+POST   /api/usuario           → Cria um novo usuário  
+PUT    /api/usuario/{id}      → Atualiza um usuário existente  
+DELETE /api/usuario/{id}      → Remove um usuário
+
+### 🆘 Pedidos de Ajuda
+
+Registra e acompanha pedidos de ajuda feitos pelos usuários.
+
+GET    /api/pedido-ajuda           → Lista todos os pedidos  
+GET    /api/pedido-ajuda/{id}      → Retorna um pedido por ID  
+POST   /api/pedido-ajuda           → Cria um novo pedido  
+PUT    /api/pedido-ajuda/{id}      → Atualiza um pedido existente  
+DELETE /api/pedido-ajuda/{id}      → Remove um pedido
+
+### 🤝 ONGs Parceiras
+
+Gerencia as ONGs cadastradas na plataforma.
+
+GET    /api/ong-parceira           → Lista todas as ONGs  
+GET    /api/ong-parceira/{id}      → Retorna uma ONG por ID  
+POST   /api/ong-parceira           → Cadastra uma nova ONG  
+PUT    /api/ong-parceira/{id}      → Atualiza os dados de uma ONG  
+DELETE /api/ong-parceira/{id}      → Remove uma ONG
+
+![VIDEO GIF SWAGGER DOC](https://github.com/user-attachments/assets/01b977af-ccd5-4946-a064-38a3cf17315f)
+
 ---
+
+## 📨 Mensageria com RabbitMQ
+
+O projeto **Orbis** implementa um sistema de mensageria assíncrona baseado em **RabbitMQ**, permitindo a comunicação entre serviços de forma desacoplada e resiliente. Essa abordagem garante que mensagens (como pedidos de ajuda) possam ser enviadas, processadas e respondidas mesmo que uma das partes esteja temporariamente indisponível.
+
+![PRINT MENSAGERIA](https://github.com/user-attachments/assets/af3589b5-7e19-41d2-85d0-9b6d6d217356)
+
+### 🔧 Como funciona:
+
+- **Producer (Produtor):** Envia mensagens para uma fila chamada `pedido_ajuda_urgencia`, contendo informações como tipo de ajuda e descrição.
+- **Consumer (Consumidor):** Escuta a fila e processa as mensagens recebidas, podendo aplicar lógicas específicas (ex: classificação de urgência via ML.NET).
+- **MensageriaController:** Expõe um endpoint HTTP para publicar mensagens na fila, facilitando a integração com o front-end ou outros serviços.
+
+### ✅ Benefícios:
+
+- Comunicação desacoplada entre módulos.
+- Tolerância a falhas e escalabilidade.
+- Persistência de mensagens mesmo se um consumidor estiver offline.
+- Integração futura com microsserviços ou análise de dados em tempo real.
+
+---
+
 ## Integração de ML.NET ao Orbis
 
 Este projeto Orbis utiliza a biblioteca **ML.NET** para implementar um modelo de aprendizado de máquina com o objetivo de classificar a urgência dos pedidos de ajuda recebidos. A seguir, detalhamos o que foi feito e como a solução funciona.
@@ -118,6 +184,7 @@ Automatizar a classificação da urgência dos pedidos de ajuda baseando-se nas 
 Esse componente de machine learning é fundamental para tornar o Orbis mais eficiente e responsivo às necessidades reais das pessoas que solicitam ajuda, permitindo decisões rápidas e mais assertivas.
 
 ---
+
 ## Como Rodar o Projeto:
 
 Certifique-se de que o SQL Developer esteja instalado e configurado.
@@ -130,6 +197,7 @@ Atualize a string de conexão no arquivo appsettings.json para o seu banco de da
 - C#
 - ASP.NET Core
 - Swagger/OpenAPI para documentação da API
+- RabbitMQ 3.x
 
 ### Pré-requisitos
 Antes de iniciar, certifique-se de ter os seguintes requisitos instalados:
