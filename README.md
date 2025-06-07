@@ -1,5 +1,11 @@
 # Orbis API
 
+Orbis é um aplicativo móvel desenvolvido para ajudar pessoas em situações de emergência, promovendo uma conexão rápida e eficiente entre quem precisa de apoio e quem pode ajudar. Seu objetivo é criar uma rede de solidariedade inteligente, especialmente em momentos críticos como enchentes, deslizamentos, quedas de energia e outros desastres.
+
+Em resumo, Orbis é muito mais que um app: é um ambiente seguro, acessível e solidário. Ele permite que qualquer pessoa peça ou ofereça ajuda com agilidade, contribuindo para uma rede de apoio ativa e eficiente — especialmente nos momentos em que isso mais importa.
+
+---
+
 Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvimento de Sistemas da FIAP, para a Global Solution 01/2025.
 
 KEVIN CHRISTIAN NOBRE – RM: 552590 - Desenvolvedor Full Stack - Mobile & .NET
