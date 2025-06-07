@@ -14,6 +14,17 @@ namespace Orbis {
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Adiciona CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
             // Configuração do banco de dados Oracle
             builder.Services.AddDbContext<OrbisDbContext>(options =>
                 options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
@@ -69,6 +80,7 @@ namespace Orbis {
                 options.RoutePrefix = "swagger";
             });
 
+            app.UseCors("AllowAll");
 
             app.UseRouting();
 

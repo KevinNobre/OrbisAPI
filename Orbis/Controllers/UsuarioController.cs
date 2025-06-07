@@ -5,7 +5,7 @@ using Orbis.Domain.Repositories;
 namespace Orbis.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/Usuario")]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository _repository;
